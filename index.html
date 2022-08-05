@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <style>
+        #map {
+            width: 1920px;
+            height:1080px;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="data/BATAS_0.js"></script>
+        <script src="data/BATAS_1.js"></script>
+        <script src="data/GARISPANTAI_2.js"></script>
+        <script src="data/BatasKabupaten_4.js"></script>
+        <script src="data/JawaBarat_5.js"></script>
+        <script src="data/BatasProvinsi_6.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[-7.75618518260423,106.30248252472687],[-5.750604289504108,108.95333860416584]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        function pop_BATAS_0(feature, layer) {
+        }
+
+        function style_BATAS_0_0() {
+            return {
+                pane: 'pane_BATAS_0',
+                opacity: 1,
+                color: 'rgba(253,253,253,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_BATAS_0');
+        map.getPane('pane_BATAS_0').style.zIndex = 400;
+        map.getPane('pane_BATAS_0').style['mix-blend-mode'] = 'normal';
+        var layer_BATAS_0 = new L.geoJson(json_BATAS_0, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_BATAS_0',
+            layerName: 'layer_BATAS_0',
+            pane: 'pane_BATAS_0',
+            onEachFeature: pop_BATAS_0,
+            style: style_BATAS_0_0,
+        });
+        bounds_group.addLayer(layer_BATAS_0);
+        map.addLayer(layer_BATAS_0);
+        function pop_BATAS_1(feature, layer) {
+        }
+
+        function style_BATAS_1_0() {
+            return {
+                pane: 'pane_BATAS_1',
+                opacity: 1,
+                color: 'rgba(11,4,6,1.0)',
+                dashArray: '10,5,1,5',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_BATAS_1');
+        map.getPane('pane_BATAS_1').style.zIndex = 401;
+        map.getPane('pane_BATAS_1').style['mix-blend-mode'] = 'normal';
+        var layer_BATAS_1 = new L.geoJson(json_BATAS_1, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_BATAS_1',
+            layerName: 'layer_BATAS_1',
+            pane: 'pane_BATAS_1',
+            onEachFeature: pop_BATAS_1,
+            style: style_BATAS_1_0,
+        });
+        bounds_group.addLayer(layer_BATAS_1);
+        map.addLayer(layer_BATAS_1);
+        function pop_GARISPANTAI_2(feature, layer) {
+        }
+
+        function style_GARISPANTAI_2_0() {
+            return {
+                pane: 'pane_GARISPANTAI_2',
+                opacity: 1,
+                color: 'rgba(2,125,183,1.0)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_GARISPANTAI_2');
+        map.getPane('pane_GARISPANTAI_2').style.zIndex = 402;
+        map.getPane('pane_GARISPANTAI_2').style['mix-blend-mode'] = 'normal';
+        var layer_GARISPANTAI_2 = new L.geoJson(json_GARISPANTAI_2, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_GARISPANTAI_2',
+            layerName: 'layer_GARISPANTAI_2',
+            pane: 'pane_GARISPANTAI_2',
+            onEachFeature: pop_GARISPANTAI_2,
+            style: style_GARISPANTAI_2_0,
+        });
+        bounds_group.addLayer(layer_GARISPANTAI_2);
+        map.addLayer(layer_GARISPANTAI_2);
+        map.createPane('pane_GoogleSatelliteHybrid_3');
+        map.getPane('pane_GoogleSatelliteHybrid_3').style.zIndex = 403;
+        var layer_GoogleSatelliteHybrid_3 = L.tileLayer('https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleSatelliteHybrid_3',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 19
+        });
+        layer_GoogleSatelliteHybrid_3;
+        map.addLayer(layer_GoogleSatelliteHybrid_3);
+        function pop_BatasKabupaten_4(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['No'] !== null ? autolinker.link(feature.properties['No'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Provinsi'] !== null ? autolinker.link(feature.properties['Provinsi'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Kode_Kab'] !== null ? autolinker.link(feature.properties['Kode_Kab'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Kab_Kota'] !== null ? autolinker.link(feature.properties['Kab_Kota'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Kode_Prov'] !== null ? autolinker.link(feature.properties['Kode_Prov'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_BatasKabupaten_4_0() {
+            return {
+                pane: 'pane_BatasKabupaten_4',
+                opacity: 1,
+                color: 'rgba(247,247,247,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(82,82,82,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_BatasKabupaten_4');
+        map.getPane('pane_BatasKabupaten_4').style.zIndex = 404;
+        map.getPane('pane_BatasKabupaten_4').style['mix-blend-mode'] = 'normal';
+        var layer_BatasKabupaten_4 = new L.geoJson(json_BatasKabupaten_4, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_BatasKabupaten_4',
+            layerName: 'layer_BatasKabupaten_4',
+            pane: 'pane_BatasKabupaten_4',
+            onEachFeature: pop_BatasKabupaten_4,
+            style: style_BatasKabupaten_4_0,
+        });
+        bounds_group.addLayer(layer_BatasKabupaten_4);
+        map.addLayer(layer_BatasKabupaten_4);
+        function pop_JawaBarat_5(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">No</th>\
+                        <td>' + (feature.properties['No'] !== null ? autolinker.link(feature.properties['No'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Provinsi</th>\
+                        <td>' + (feature.properties['Provinsi'] !== null ? autolinker.link(feature.properties['Provinsi'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Kode_Kab</th>\
+                        <td>' + (feature.properties['Kode_Kab'] !== null ? autolinker.link(feature.properties['Kode_Kab'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Kab_Kota</th>\
+                        <td>' + (feature.properties['Kab_Kota'] !== null ? autolinker.link(feature.properties['Kab_Kota'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Kode_Prov</th>\
+                        <td>' + (feature.properties['Kode_Prov'] !== null ? autolinker.link(feature.properties['Kode_Prov'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Foto</th>\
+                        <td>' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_JawaBarat_5_0(feature) {
+            switch(String(feature.properties['Kab_Kota'])) {
+                case 'BANDUNG':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,245,240,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'BANDUNG BARAT':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,245,240,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'BEKASI':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(205,92,92,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'BOGOR':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(205,92,92,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'CIAMIS':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,245,240,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'CIANJUR':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(205,92,92,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'CIREBON':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(205,92,92,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'GARUT':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(248,151,238,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'INDRAMAYU':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(205,92,92,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'KARAWANG':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,245,240,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'KOTA BANDUNG':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(205,92,92,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'KOTA BANJAR':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,245,240,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'KOTA BEKASI':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(205,92,92,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'KOTA BOGOR':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(48,204,36,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'KOTA CIMAHI':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,245,240,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'KOTA CIREBON':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(205,92,92,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'KOTA DEPOK':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(205,92,92,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'KOTA SUKABUMI':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(80,87,98,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'KOTA TASIKMALAYA':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(44,47,160,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'KUNINGAN':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(80,87,98,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'MAJALENGKA':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,245,240,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'PANGANDARAN':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(80,87,98,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'PURWAKARTA':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,245,240,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'SUBANG':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(80,87,98,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'SUKABUMI':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(80,87,98,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'SUMEDANG':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(205,92,92,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'TASIKMALAYA':
+                    return {
+                pane: 'pane_JawaBarat_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '10,5,1,5,1,5',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(44,47,160,1.0)',
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_JawaBarat_5');
+        map.getPane('pane_JawaBarat_5').style.zIndex = 405;
+        map.getPane('pane_JawaBarat_5').style['mix-blend-mode'] = 'normal';
+        var layer_JawaBarat_5 = new L.geoJson(json_JawaBarat_5, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_JawaBarat_5',
+            layerName: 'layer_JawaBarat_5',
+            pane: 'pane_JawaBarat_5',
+            onEachFeature: pop_JawaBarat_5,
+            style: style_JawaBarat_5_0,
+        });
+        bounds_group.addLayer(layer_JawaBarat_5);
+        map.addLayer(layer_JawaBarat_5);
+        function pop_BatasProvinsi_6(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['No'] !== null ? autolinker.link(feature.properties['No'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Kode_Prov'] !== null ? autolinker.link(feature.properties['Kode_Prov'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Provinsi'] !== null ? autolinker.link(feature.properties['Provinsi'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_BatasProvinsi_6_0() {
+            return {
+                pane: 'pane_BatasProvinsi_6',
+                opacity: 1,
+                color: 'rgba(247,247,247,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(82,82,82,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_BatasProvinsi_6');
+        map.getPane('pane_BatasProvinsi_6').style.zIndex = 406;
+        map.getPane('pane_BatasProvinsi_6').style['mix-blend-mode'] = 'normal';
+        var layer_BatasProvinsi_6 = new L.geoJson(json_BatasProvinsi_6, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_BatasProvinsi_6',
+            layerName: 'layer_BatasProvinsi_6',
+            pane: 'pane_BatasProvinsi_6',
+            onEachFeature: pop_BatasProvinsi_6,
+            style: style_BatasProvinsi_6_0,
+        });
+        bounds_group.addLayer(layer_BatasProvinsi_6);
+        map.addLayer(layer_BatasProvinsi_6);
+        setBounds();
+        var i = 0;
+        layer_BatasKabupaten_4.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['Kab_Kota'] !== null?String('<div style="color: #000000; font-size: 5pt; font-family: \'Roboto\', sans-serif;">' + layer.feature.properties['Kab_Kota']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_BatasKabupaten_4'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_BatasProvinsi_6.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['Provinsi'] !== null?String('<div style="color: #ffffff; font-size: 8pt; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['Provinsi']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_BatasProvinsi_6'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        resetLabels([layer_BatasKabupaten_4,layer_BatasProvinsi_6]);
+        map.on("zoomend", function(){
+            resetLabels([layer_BatasKabupaten_4,layer_BatasProvinsi_6]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_BatasKabupaten_4,layer_BatasProvinsi_6]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_BatasKabupaten_4,layer_BatasProvinsi_6]);
+        });
+        </script>
+    </body>
+</html>
